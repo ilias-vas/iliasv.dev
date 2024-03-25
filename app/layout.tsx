@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.io'),
+  metadataBase: new URL('https://iliasv.dev'),
   title: {
     default: 'Ilias Vasiliou',
     template: '%s | Ilias Vasiliou',
