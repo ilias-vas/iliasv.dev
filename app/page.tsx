@@ -98,14 +98,7 @@ export default function Page() {
       <Card className="bg-background/5">
         <CardBody>
           <div className='flex items-start space-x-5'>
-            <Image
-              src="/memoji.png"
-              width={200}
-              height={200}
-              alt="Memoji"
-              quality={100}
-              className='rounded-lg bg-background/10'
-            />
+            <img src='/memoji.png' width={200} height={200} alt='Memoji' className='rounded-lg bg-background' /> 
             <div className='flex flex-col justify-center'>
               <h1 className='text-neutral-600 dark:text-neutral-200 font-bold text-2xl'>
                 Ilias Vasiliou

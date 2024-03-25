@@ -6,7 +6,7 @@ export const sql = postgres(process.env.POSTGRES_URL, {
 
 const nextConfig = {
   experimental: {
-    ppr: true,
+    ppr: false,
     useLightningcss: true,
   },
   async redirects() {
@@ -33,6 +33,8 @@ const nextConfig = {
       },
     ];
   },
+  output: 'export',
+  distDir: 'out'
 };
 
 const ContentSecurityPolicy = `
