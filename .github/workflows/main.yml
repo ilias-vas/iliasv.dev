@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.iliasv.dev
+        server: ftpes.iliasv.dev
         username: ilias@iliasv.dev
         password: ${{ secrets.password }}
