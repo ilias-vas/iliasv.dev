@@ -88,7 +88,7 @@ export default function Page() {
 
         <br/>
         <br/>
-        On this site you can find examples of some of my past boop<Link href="/work">projects</Link>,
+        On this site you can find examples of some of my past <Link href="/work">projects</Link>,
         my current <Link href="https://drive.google.com/file/d/1yeRrQg1gQjk55SMAXAkEEewBIio2b4_q/view?usp=sharing" rel='noopener noreferrer' target='_blank'>resume</Link> as well 
         as my various contact details. Please feel free to get in touch if you have any opportunities available for me!
       </p>
