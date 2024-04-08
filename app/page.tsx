@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/react"
-import Image from 'next/image'
+import {Card, CardBody } from "@nextui-org/react"
 function Badge(props) {
   return (
     <a
