@@ -16,7 +16,7 @@ export default function Page() {
     <section>
       <h1 className="font-medium text-3xl mb-8 tracking-tighter">hi, I'm ilias 🧑‍🎓</h1>
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm currently a 3rd year student at the `}
+        {`I'm currently a student at the `}
         <span className='not-prose'>
           <Badge href="https://www.uts.edu.au">
             <img
