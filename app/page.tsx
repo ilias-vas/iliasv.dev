@@ -29,7 +29,7 @@ export default function Page() {
             University of Technology Sydney
           </Badge>
         </span>
-        {` studying a Bachelor of Computing Science (Honours) with a major in Artificial Intelligence and Data analytics. I am also currently a Student Firmware Engineer at Cochlear, where I design, implement, test, and maintain embedded software, sound processing technologies and tools for the next generation of Sound Processor technologies.`}
+        {` studying a Bachelor of Computing Science (Honours) with a major in Artificial Intelligence and Data analytics. I've previously worked as a Student Embedded Software Engineer at Cochlear where I designed, implemented, tested, and maintained firmware, sound processing technologies and tools for the next generation of Sound Processors.`}
         <br/>
         <br/>
 
