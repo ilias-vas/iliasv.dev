@@ -92,41 +92,6 @@ export default function Page() {
         my current <Link href="https://drive.google.com/file/d/1yeRrQg1gQjk55SMAXAkEEewBIio2b4_q/view?usp=sharing" rel='noopener noreferrer' target='_blank'>resume</Link> as well 
         as my various contact details. Please feel free to get in touch if you have any opportunities available for me!
       </p>
-      
-      <br/>
-      <Card className="bg-background/5">
-        <CardBody>
-          <div className='flex items-start space-x-5'>
-            <img src='/memoji.png' width={200} height={200} alt='Memoji' className='rounded-lg bg-background/10' /> 
-            <div className='flex flex-col justify-center'>
-              <h1 className='text-neutral-600 dark:text-neutral-200 font-bold text-2xl'>
-                Ilias Vasiliou
-              </h1>
-              <br/>
-              <div className='flex items-center'>
-                <img src='/github.svg' alt='Github' className='h-8 w-8 mr-4 drop-shadow-lg' />
-                <p className='prose prose-neutral dark:prose-invert'>
-                  <Link href="https://github.com/ilias-vas">Check out my projects on GitHub!</Link>
-                </p>
-              </div>
-              <br/>
-              <div className='flex items-center'>
-                <img src='/linkedin.svg' alt='Linkedin' className='h-8 w-8 mr-4' />
-                <p className='prose prose-neutral dark:prose-invert'>
-                  <Link href="https://linkedin.com/in/iliasv">Connect with me on Linkedin!</Link>
-                </p>
-              </div>
-              <br/>
-              <div className='flex items-center'>
-                <img src='/facebook.svg' alt='facebook' className='h-8 w-8 mr-4 drop-shadow-sm' />
-                <p className='prose prose-neutral dark:prose-invert'>
-                  <Link href="https://www.facebook.com/ilias.vasiliou.902">Add me on Facebook!</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </CardBody>
-      </Card>
     </section>
   );
 }
