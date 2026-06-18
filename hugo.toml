@@ -1,0 +1,27 @@
+baseURL = 'https://iliasv.dev'
+locale = 'en-us'
+title = 'iliasv.dev'
+theme = 'iv'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'portfolio and blog'
+  linkedin = 'https://www.linkedin.com/in/iliasv/'
+  github = 'https://github.com/ilias-vas'
+  email = 'iliasvasiliou07@gmail.com'
+
+[menus]
+  [[menus.main]]
+    name = '[/blog]'
+    pageRef = '/blog'
+    weight = 20
+
+  [[menus.main]]
+    name = '[/projects]'
+    pageRef = '/projects'
+    weight = 30
+
+  [[menus.main]]
+    name = '[/resume]'
+    pageRef = '/resume'
+    weight = 40

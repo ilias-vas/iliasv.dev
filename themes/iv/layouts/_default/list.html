@@ -1,0 +1,82 @@
+{{ define "main" }}
+  <section class="page-list">
+    {{ if ne .Section "blog" }}
+      <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="page-subtitle">{{ . }}</p>
+        {{ end }}
+      </header>
+
+      {{ with .Content }}
+        <div class="prose">
+          {{ . }}
+        </div>
+      {{ end }}
+    {{ end }}
+
+    {{ if eq .Section "blog" }}
+      {{ $blogPages := where site.RegularPages "Section" "blog" }}
+      {{ $postPages := where site.RegularPages "Section" "posts" }}
+      {{ $pages := union $blogPages $postPages }}
+      {{ if gt (len $pages) 0 }}
+        <ol class="post-list">
+          {{ range sort $pages "Date" "desc" }}
+            <li class="post-item">
+              <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+              {{ with or .Description .Params.summary .Summary }}
+                <p>{{ . | plainify }}</p>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      {{ else }}
+        <p class="empty-state">No posts yet.</p>
+      {{ end }}
+    {{ else if eq .Section "projects" }}
+      {{ if .Params.projects }}
+        <ol class="project-list">
+          {{ range .Params.projects }}
+            <li class="project-item">
+              <h2>{{ .title }}</h2>
+              {{ with .description }}
+                <p>{{ . }}</p>
+              {{ end }}
+              {{ with .links }}
+                <p class="project-links">
+                  {{ range . }}
+                    <a href="{{ .url }}">{{ .label }}</a>
+                  {{ end }}
+                </p>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      {{ else if gt (len .RegularPages) 0 }}
+        <ol class="project-list">
+          {{ range .RegularPages.ByTitle }}
+            <li class="project-item">
+              <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+              {{ with or .Params.summary .Description }}
+                <p>{{ . }}</p>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      {{ else if not .Content }}
+        <p class="empty-state">No projects yet.</p>
+      {{ end }}
+    {{ else if gt (len .Pages) 0 }}
+      <ol class="post-list">
+        {{ range .Pages }}
+          <li class="post-item">
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ with or .Params.summary .Description }}
+              <p>{{ . }}</p>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    {{ end }}
+  </section>
+{{ end }}

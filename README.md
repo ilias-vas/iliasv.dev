@@ -1,2 +1,2 @@
 # iliasv.dev
-Blog / folio site made with hugo.
+Blog / folio site made with [hugo.](https://gohugo.io/)

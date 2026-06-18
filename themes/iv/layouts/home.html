@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <section class="home-intro">
+    {{ if .Content }}
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    {{ else }}
+      {{ with .Params.intro }}
+        <p class="lede">{{ . | markdownify }}</p>
+      {{ end }}
+    {{ end }}
+  </section>
+
+  {{ $blogPages := where site.RegularPages "Section" "blog" }}
+  {{ $postPages := where site.RegularPages "Section" "posts" }}
+  {{ $pages := union $blogPages $postPages }}
+  {{ if gt (len $pages) 0 }}
+    <ol class="home-post-list" aria-label="Blog posts">
+      {{ range sort $pages "Date" "desc" }}
+        <li class="home-post-item">
+          {{ if not .Date.IsZero }}
+            <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006-01-02" }}</time>
+          {{ end }}
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{ with .Params.tags }}
+            <span class="home-post-tags">
+              {{ range . }}<span>#{{ . }}</span>{{ end }}
+            </span>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  {{ end }}
+{{ end }}
